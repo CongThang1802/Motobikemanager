@@ -1,0 +1,14 @@
+C:\Users\Black-Sky\source\repos\MotorCycleStore_Fram_4_7_2\Data_Entity\bin\Debug\Data_Entity.dll.config
+C:\Users\Black-Sky\source\repos\MotorCycleStore_Fram_4_7_2\Data_Entity\bin\Debug\Data_Entity.dll
+C:\Users\Black-Sky\source\repos\MotorCycleStore_Fram_4_7_2\Data_Entity\bin\Debug\Data_Entity.pdb
+C:\Users\Black-Sky\source\repos\MotorCycleStore_Fram_4_7_2\Data_Entity\bin\Debug\EntityFramework.dll
+C:\Users\Black-Sky\source\repos\MotorCycleStore_Fram_4_7_2\Data_Entity\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Black-Sky\source\repos\MotorCycleStore_Fram_4_7_2\Data_Entity\bin\Debug\EntityFramework.xml
+C:\Users\Black-Sky\source\repos\MotorCycleStore_Fram_4_7_2\Data_Entity\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Black-Sky\source\repos\MotorCycleStore_Fram_4_7_2\Data_Entity\obj\Debug\Data_Entity.csprojAssemblyReference.cache
+C:\Users\Black-Sky\source\repos\MotorCycleStore_Fram_4_7_2\Data_Entity\obj\Debug\Data_Entity.csproj.CoreCompileInputs.cache
+C:\Users\Black-Sky\source\repos\MotorCycleStore_Fram_4_7_2\Data_Entity\obj\Debug\Data_Entity.csproj.CopyComplete
+C:\Users\Black-Sky\source\repos\MotorCycleStore_Fram_4_7_2\Data_Entity\obj\Debug\Data_Entity.dll
+C:\Users\Black-Sky\source\repos\MotorCycleStore_Fram_4_7_2\Data_Entity\obj\Debug\Data_Entity.pdb
+C:\Users\Black-Sky\source\repos\MotorCycleStore_Fram_4_7_2\Data_Entity\obj\Debug\Data_Entity.Properties.Resources.resources
+C:\Users\Black-Sky\source\repos\MotorCycleStore_Fram_4_7_2\Data_Entity\obj\Debug\Data_Entity.csproj.GenerateResource.cache

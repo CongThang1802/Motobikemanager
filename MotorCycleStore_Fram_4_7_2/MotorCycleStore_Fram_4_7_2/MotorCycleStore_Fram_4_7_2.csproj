@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D410746F-C1EA-4791-AC76-E5BB4BEB07D5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MotorCycleStore_Fram_4_7_2</RootNamespace>
+    <AssemblyName>MotorCycleStore_Fram_4_7_2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\Documents\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\Documents\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="controls\Get_ID_Items.cs" />
+    <Compile Include="models\ComboboxItem.cs" />
+    <Compile Include="models\Create_ID.cs" />
+    <Compile Include="models\ImageConvert.cs" />
+    <Compile Include="models\MD5_Hash.cs" />
+    <Compile Include="views\Dialogs\Add_DanhMuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\Dialogs\Add_DanhMuc.Designer.cs">
+      <DependentUpon>Add_DanhMuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\Dialogs\Edit_DanhMuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\Dialogs\Edit_DanhMuc.Designer.cs">
+      <DependentUpon>Edit_DanhMuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\Form_Login_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\Form_Login_Main.Designer.cs">
+      <DependentUpon>Form_Login_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="views\Form_Menu_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\Form_Menu_Main.Designer.cs">
+      <DependentUpon>Form_Menu_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\UC_Item\UC_ItemDanhMuc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\UC_Item\UC_ItemDanhMuc.Designer.cs">
+      <DependentUpon>UC_ItemDanhMuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\UC_QuanLyNhap\UC_BaoHanh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\UC_QuanLyNhap\UC_BaoHanh.Designer.cs">
+      <DependentUpon>UC_BaoHanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\UC_QuanLyNhap\UC_DanhMuc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\UC_QuanLyNhap\UC_DanhMuc.Designer.cs">
+      <DependentUpon>UC_DanhMuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\UC_QuanLyNhap\UC_HangSX.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\UC_QuanLyNhap\UC_HangSX.Designer.cs">
+      <DependentUpon>UC_HangSX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\UC_QuanLyNhap\UC_LoaiSP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\UC_QuanLyNhap\UC_LoaiSP.Designer.cs">
+      <DependentUpon>UC_LoaiSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\UC_QuanLyNhap\UC_NhaCC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\UC_QuanLyNhap\UC_NhaCC.Designer.cs">
+      <DependentUpon>UC_NhaCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\UC_QuanLySanPham\UC_NhapSP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\UC_QuanLySanPham\UC_NhapSP.Designer.cs">
+      <DependentUpon>UC_NhapSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\UC_QuanLyTaiKhoan\UC_LoaiTK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\UC_QuanLyTaiKhoan\UC_LoaiTK.Designer.cs">
+      <DependentUpon>UC_LoaiTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\UC_QuanLyTaiKhoan\UC_TaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\UC_QuanLyTaiKhoan\UC_TaiKhoan.Designer.cs">
+      <DependentUpon>UC_TaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\Tab_UserControls\UC_QuanLyBanHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\Tab_UserControls\UC_QuanLyBanHang.Designer.cs">
+      <DependentUpon>UC_QuanLyBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\Tab_UserControls\UC_KhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\Tab_UserControls\UC_KhachHang.Designer.cs">
+      <DependentUpon>UC_KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\Tab_UserControls\UC_QuanLyKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\Tab_UserControls\UC_QuanLyKho.Designer.cs">
+      <DependentUpon>UC_QuanLyKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\Tab_UserControls\UC_QuanTaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\Tab_UserControls\UC_QuanTaiKhoan.Designer.cs">
+      <DependentUpon>UC_QuanTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\Tab_UserControls\UC_QuanLyNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\Tab_UserControls\UC_QuanLyNhap.Designer.cs">
+      <DependentUpon>UC_QuanLyNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\Tab_UserControls\UC_ThongKe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\Tab_UserControls\UC_ThongKe.Designer.cs">
+      <DependentUpon>UC_ThongKe.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="views\Dialogs\Add_DanhMuc.resx">
+      <DependentUpon>Add_DanhMuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\Dialogs\Edit_DanhMuc.resx">
+      <DependentUpon>Edit_DanhMuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\Form_Login_Main.resx">
+      <DependentUpon>Form_Login_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="views\Form_Menu_Main.resx">
+      <DependentUpon>Form_Menu_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\UC_Item\UC_ItemDanhMuc.resx">
+      <DependentUpon>UC_ItemDanhMuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\UC_QuanLyNhap\UC_BaoHanh.resx">
+      <DependentUpon>UC_BaoHanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\UC_QuanLyNhap\UC_DanhMuc.resx">
+      <DependentUpon>UC_DanhMuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\UC_QuanLyNhap\UC_HangSX.resx">
+      <DependentUpon>UC_HangSX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\UC_QuanLyNhap\UC_LoaiSP.resx">
+      <DependentUpon>UC_LoaiSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\UC_QuanLyNhap\UC_NhaCC.resx">
+      <DependentUpon>UC_NhaCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\UC_QuanLySanPham\UC_NhapSP.resx">
+      <DependentUpon>UC_NhapSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\UC_QuanLyTaiKhoan\UC_LoaiTK.resx">
+      <DependentUpon>UC_LoaiTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\UC_QuanLyTaiKhoan\UC_TaiKhoan.resx">
+      <DependentUpon>UC_TaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\Tab_UserControls\UC_QuanLyBanHang.resx">
+      <DependentUpon>UC_QuanLyBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\Tab_UserControls\UC_KhachHang.resx">
+      <DependentUpon>UC_KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\Tab_UserControls\UC_QuanLyKho.resx">
+      <DependentUpon>UC_QuanLyKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\Tab_UserControls\UC_QuanTaiKhoan.resx">
+      <DependentUpon>UC_QuanTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\Tab_UserControls\UC_QuanLyNhap.resx">
+      <DependentUpon>UC_QuanLyNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\Tab_UserControls\UC_ThongKe.resx">
+      <DependentUpon>UC_ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="views\UC_QuanLyBan\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons\4707164-128.png" />
+    <Content Include="icons\add_48px.png" />
+    <Content Include="icons\Blockchain New Logo_40px.png" />
+    <Content Include="icons\christmas_star_48px.png" />
+    <Content Include="icons\coins_48px.png" />
+    <Content Include="icons\delete_trash_48px.png" />
+    <Content Include="icons\edit_48px.png" />
+    <Content Include="icons\iconfinder_29_2169579.png" />
+    <Content Include="icons\iconfinder_37_5027831.png" />
+    <Content Include="icons\iconfinder_5302_-_Whatsapp_1313514.png" />
+    <Content Include="icons\iconfinder_business-work_12_2377635.png" />
+    <Content Include="icons\iconfinder_Close_Box_Red_34217.png" />
+    <Content Include="icons\iconfinder_Data-19_4203023.png" />
+    <Content Include="icons\iconfinder_DeleteRed_34218.png" />
+    <Content Include="icons\iconfinder_Dots_vertical_more_setting_user_interface_web_app_4567719.png" />
+    <Content Include="icons\iconfinder_ecommerce-08_4707164.png" />
+    <Content Include="icons\iconfinder_Facebook_UI-08_2344308.png" />
+    <Content Include="icons\iconfinder_gmail_1220340.png" />
+    <Content Include="icons\iconfinder_grid-layout-window_532725.png" />
+    <Content Include="icons\iconfinder_management_2799204.png" />
+    <Content Include="icons\iconfinder_Minimize_Box_Blue_34230.png" />
+    <Content Include="icons\iconfinder_Pencil3_34236.png" />
+    <Content Include="icons\iconfinder_Plus__Orange_34237.png" />
+    <Content Include="icons\iconfinder_send_box_45273.png" />
+    <Content Include="icons\iconfinder_Social-01-Facebook-Outline_1243572.png" />
+    <Content Include="icons\iconfinder_userconfig_7388.png" />
+    <Content Include="icons\iconfinder_User_Customers_1218712.png" />
+    <Content Include="icons\iconfinder_user_login_61841.png" />
+    <Content Include="icons\picture_48px.png" />
+    <Content Include="icons\prison_96px.png" />
+    <Content Include="icons\rotate_right_26px.png" />
+    <Content Include="icons\search_50px.png" />
+    <Content Include="icons\update_tag_60px.png" />
+    <Content Include="Pictures\Banner-Yamaha-HonDa-VinFast-1--986-x-450-px-%28Final%29.png" />
+    <Content Include="Pictures\honda-esp-banner.jpg" />
+    <Content Include="Pictures\logo.png" />
+    <None Include="Resources\iconfinder_garbage_trash_delete_user_interface_app_3832210.png" />
+    <None Include="Resources\iconfinder_website_-_pencil_3440848.png" />
+    <None Include="Resources\iconfinder_1-04_511562.png" />
+    <None Include="Resources\Image1.bmp" />
+    <None Include="Resources\iconfinder_DeleteRed_34218.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Data_Entity\Data_Entity.csproj">
+      <Project>{da0ac76e-0491-4478-81d8-34c136364d63}</Project>
+      <Name>Data_Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

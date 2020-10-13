@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ThanhHa_MotorCycleModelStoreContainer" CdmEntityContainer="ThanhHa_MotorCycleEntities">
+    <EntitySetMapping Name="Hang_SX">
+      <EntityTypeMapping TypeName="ThanhHa_MotorCycleModel.Hang_SX">
+        <MappingFragment StoreEntitySet="Hang_SX">
+          <ScalarProperty Name="id_HangSX" ColumnName="id_HangSX" />
+          <ScalarProperty Name="name_HangSX" ColumnName="name_HangSX" />
+          <ScalarProperty Name="descrip_HangSX" ColumnName="descrip_HangSX" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Loai_SP">
+      <EntityTypeMapping TypeName="ThanhHa_MotorCycleModel.Loai_SP">
+        <MappingFragment StoreEntitySet="Loai_SP">
+          <ScalarProperty Name="descrip_LoaiSP" ColumnName="descrip_LoaiSP" />
+          <ScalarProperty Name="name_LoaiSP" ColumnName="name_LoaiSP" />
+          <ScalarProperty Name="id_LoaiSP" ColumnName="id_LoaiSP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NhaCungCap">
+      <EntityTypeMapping TypeName="ThanhHa_MotorCycleModel.NhaCungCap">
+        <MappingFragment StoreEntitySet="NhaCungCap">
+          <ScalarProperty Name="address_NhaCC" ColumnName="address_NhaCC" />
+          <ScalarProperty Name="email_NhaCC" ColumnName="email_NhaCC" />
+          <ScalarProperty Name="phone_NhaCC" ColumnName="phone_NhaCC" />
+          <ScalarProperty Name="name_NhaCC" ColumnName="name_NhaCC" />
+          <ScalarProperty Name="id_NhaCC" ColumnName="id_NhaCC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DanhMuc">
+      <EntityTypeMapping TypeName="ThanhHa_MotorCycleModel.DanhMuc">
+        <MappingFragment StoreEntitySet="DanhMuc">
+          <ScalarProperty Name="total_DanhMuc" ColumnName="total_DanhMuc" />
+          <ScalarProperty Name="image_DanhMuc" ColumnName="image_DanhMuc" />
+          <ScalarProperty Name="price_DanhMuc" ColumnName="price_DanhMuc" />
+          <ScalarProperty Name="weight_DanhMuc" ColumnName="weight_DanhMuc" />
+          <ScalarProperty Name="id_BaoHanh" ColumnName="id_BaoHanh" />
+          <ScalarProperty Name="id_LoaiSP" ColumnName="id_LoaiSP" />
+          <ScalarProperty Name="id_HangSX" ColumnName="id_HangSX" />
+          <ScalarProperty Name="torque_DanhMuc" ColumnName="torque_DanhMuc" />
+          <ScalarProperty Name="tire_DanhMuc" ColumnName="tire_DanhMuc" />
+          <ScalarProperty Name="breakend_DanhMuc" ColumnName="breakend_DanhMuc" />
+          <ScalarProperty Name="breakfont_DanhMuc" ColumnName="breakfont_DanhMuc" />
+          <ScalarProperty Name="volume_DanhMuc" ColumnName="volume_DanhMuc" />
+          <ScalarProperty Name="engine_DanhMuc" ColumnName="engine_DanhMuc" />
+          <ScalarProperty Name="size_DanhMuc" ColumnName="size_DanhMuc" />
+          <ScalarProperty Name="name_DanhMuc" ColumnName="name_DanhMuc" />
+          <ScalarProperty Name="id_DanhMuc" ColumnName="id_DanhMuc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Loai_TK">
+      <EntityTypeMapping TypeName="ThanhHa_MotorCycleModel.Loai_TK">
+        <MappingFragment StoreEntitySet="Loai_TK">
+          <ScalarProperty Name="descrip_LoaiTK" ColumnName="descrip_LoaiTK" />
+          <ScalarProperty Name="name_LoaiTK" ColumnName="name_LoaiTK" />
+          <ScalarProperty Name="id_LoaiTK" ColumnName="id_LoaiTK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bao_Hanh">
+      <EntityTypeMapping TypeName="ThanhHa_MotorCycleModel.Bao_Hanh">
+        <MappingFragment StoreEntitySet="Bao_Hanh">
+          <ScalarProperty Name="descript" ColumnName="descript" />
+          <ScalarProperty Name="lim_BaoHanh" ColumnName="lim_BaoHanh" />
+          <ScalarProperty Name="id_BaoHanh" ColumnName="id_BaoHanh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Get_DanhMucCustom" FunctionName="ThanhHa_MotorCycleModel.Store.Get_DanhMucCustom">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ThanhHa_MotorCycleModel.Get_DanhMucCustom_Result">
+          <ScalarProperty Name="id_DanhMuc" ColumnName="id_DanhMuc" />
+          <ScalarProperty Name="name_DanhMuc" ColumnName="name_DanhMuc" />
+          <ScalarProperty Name="size_DanhMuc" ColumnName="size_DanhMuc" />
+          <ScalarProperty Name="engine_DanhMuc" ColumnName="engine_DanhMuc" />
+          <ScalarProperty Name="volume_DanhMuc" ColumnName="volume_DanhMuc" />
+          <ScalarProperty Name="breakfont_DanhMuc" ColumnName="breakfont_DanhMuc" />
+          <ScalarProperty Name="breakend_DanhMuc" ColumnName="breakend_DanhMuc" />
+          <ScalarProperty Name="tire_DanhMuc" ColumnName="tire_DanhMuc" />
+          <ScalarProperty Name="torque_DanhMuc" ColumnName="torque_DanhMuc" />
+          <ScalarProperty Name="name_HangSX" ColumnName="name_HangSX" />
+          <ScalarProperty Name="name_LoaiSP" ColumnName="name_LoaiSP" />
+          <ScalarProperty Name="lim_BaoHanh" ColumnName="lim_BaoHanh" />
+          <ScalarProperty Name="weight_DanhMuc" ColumnName="weight_DanhMuc" />
+          <ScalarProperty Name="price_DanhMuc" ColumnName="price_DanhMuc" />
+          <ScalarProperty Name="image_DanhMuc" ColumnName="image_DanhMuc" />
+          <ScalarProperty Name="total_DanhMuc" ColumnName="total_DanhMuc" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="CT_HoaDon">
+      <EntityTypeMapping TypeName="ThanhHa_MotorCycleModel.CT_HoaDon">
+        <MappingFragment StoreEntitySet="CT_HoaDon">
+          <ScalarProperty Name="total_HoaDon" ColumnName="total_HoaDon" />
+          <ScalarProperty Name="num_HoaDon" ColumnName="num_HoaDon" />
+          <ScalarProperty Name="id_HoaDon" ColumnName="id_HoaDon" />
+          <ScalarProperty Name="id_DanhMuc" ColumnName="id_DanhMuc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HoaDon">
+      <EntityTypeMapping TypeName="ThanhHa_MotorCycleModel.HoaDon">
+        <MappingFragment StoreEntitySet="HoaDon">
+          <ScalarProperty Name="address_HoaDon" ColumnName="address_HoaDon" />
+          <ScalarProperty Name="email_HoaDon" ColumnName="email_HoaDon" />
+          <ScalarProperty Name="name_HoaDon" ColumnName="name_HoaDon" />
+          <ScalarProperty Name="phone_HoaDon" ColumnName="phone_HoaDon" />
+          <ScalarProperty Name="date_HoaDon" ColumnName="date_HoaDon" />
+          <ScalarProperty Name="id_HoaDon" ColumnName="id_HoaDon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SanPham">
+      <EntityTypeMapping TypeName="ThanhHa_MotorCycleModel.SanPham">
+        <MappingFragment StoreEntitySet="SanPham">
+          <ScalarProperty Name="descript_SanPham" ColumnName="descript_SanPham" />
+          <ScalarProperty Name="somay_SanPham" ColumnName="somay_SanPham" />
+          <ScalarProperty Name="sokhung_SanPham" ColumnName="sokhung_SanPham" />
+          <ScalarProperty Name="id_SanPham" ColumnName="id_SanPham" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaiKhoan">
+      <EntityTypeMapping TypeName="ThanhHa_MotorCycleModel.TaiKhoan">
+        <MappingFragment StoreEntitySet="TaiKhoan">
+          <ScalarProperty Name="id_LoaiTK" ColumnName="id_LoaiTK" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="pass_Acc" ColumnName="pass_Acc" />
+          <ScalarProperty Name="user_Acc" ColumnName="user_Acc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TT_TaiKhoan">
+      <EntityTypeMapping TypeName="ThanhHa_MotorCycleModel.TT_TaiKhoan">
+        <MappingFragment StoreEntitySet="TT_TaiKhoan">
+          <ScalarProperty Name="address_User" ColumnName="address_User" />
+          <ScalarProperty Name="phone_User" ColumnName="phone_User" />
+          <ScalarProperty Name="email_User" ColumnName="email_User" />
+          <ScalarProperty Name="name_User" ColumnName="name_User" />
+          <ScalarProperty Name="user_Acc" ColumnName="user_Acc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Get_TaiKhoan" FunctionName="ThanhHa_MotorCycleModel.Store.Get_TaiKhoan">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ThanhHa_MotorCycleModel.Get_TaiKhoan_Result">
+          <ScalarProperty Name="user_Acc" ColumnName="user_Acc" />
+          <ScalarProperty Name="name_User" ColumnName="name_User" />
+          <ScalarProperty Name="email_User" ColumnName="email_User" />
+          <ScalarProperty Name="phone_User" ColumnName="phone_User" />
+          <ScalarProperty Name="address_User" ColumnName="address_User" />
+          <ScalarProperty Name="pass_Acc" ColumnName="pass_Acc" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="id_LoaiTK" ColumnName="id_LoaiTK" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

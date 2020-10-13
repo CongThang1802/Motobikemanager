@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ThanhHa_MotorCycleModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Bao_Hanh">
+          <Key>
+            <PropertyRef Name="id_BaoHanh" />
+          </Key>
+          <Property Name="id_BaoHanh" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="lim_BaoHanh" Type="nvarchar" MaxLength="80" />
+          <Property Name="descript" Type="ntext" />
+        </EntityType>
+        <EntityType Name="CT_HoaDon">
+          <Key>
+            <PropertyRef Name="id_DanhMuc" />
+            <PropertyRef Name="id_HoaDon" />
+          </Key>
+          <Property Name="id_DanhMuc" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="id_HoaDon" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="num_HoaDon" Type="int" />
+          <Property Name="total_HoaDon" Type="int" />
+        </EntityType>
+        <EntityType Name="DanhMuc">
+          <Key>
+            <PropertyRef Name="id_DanhMuc" />
+          </Key>
+          <Property Name="id_DanhMuc" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="name_DanhMuc" Type="nvarchar" MaxLength="50" />
+          <Property Name="size_DanhMuc" Type="nvarchar" MaxLength="50" />
+          <Property Name="engine_DanhMuc" Type="nvarchar" MaxLength="80" />
+          <Property Name="volume_DanhMuc" Type="nchar" MaxLength="10" />
+          <Property Name="breakfont_DanhMuc" Type="nvarchar" MaxLength="50" />
+          <Property Name="breakend_DanhMuc" Type="nvarchar" MaxLength="50" />
+          <Property Name="tire_DanhMuc" Type="nvarchar" MaxLength="50" />
+          <Property Name="torque_DanhMuc" Type="nvarchar" MaxLength="50" />
+          <Property Name="id_HangSX" Type="nchar" MaxLength="10" />
+          <Property Name="id_LoaiSP" Type="nchar" MaxLength="10" />
+          <Property Name="id_BaoHanh" Type="nchar" MaxLength="10" />
+          <Property Name="weight_DanhMuc" Type="int" />
+          <Property Name="price_DanhMuc" Type="int" />
+          <Property Name="image_DanhMuc" Type="image" />
+          <Property Name="total_DanhMuc" Type="int" />
+        </EntityType>
+        <EntityType Name="Hang_SX">
+          <Key>
+            <PropertyRef Name="id_HangSX" />
+          </Key>
+          <Property Name="id_HangSX" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="name_HangSX" Type="nvarchar" MaxLength="50" />
+          <Property Name="descrip_HangSX" Type="ntext" />
+        </EntityType>
+        <EntityType Name="HoaDon">
+          <Key>
+            <PropertyRef Name="id_HoaDon" />
+          </Key>
+          <Property Name="id_HoaDon" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="date_HoaDon" Type="date" />
+          <Property Name="phone_HoaDon" Type="nchar" MaxLength="10" />
+          <Property Name="name_HoaDon" Type="nvarchar" MaxLength="20" />
+          <Property Name="email_HoaDon" Type="nchar" MaxLength="20" />
+          <Property Name="address_HoaDon" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="Loai_SP">
+          <Key>
+            <PropertyRef Name="id_LoaiSP" />
+          </Key>
+          <Property Name="id_LoaiSP" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="name_LoaiSP" Type="nvarchar" MaxLength="50" />
+          <Property Name="descrip_LoaiSP" Type="ntext" />
+        </EntityType>
+        <EntityType Name="Loai_TK">
+          <Key>
+            <PropertyRef Name="id_LoaiTK" />
+          </Key>
+          <Property Name="id_LoaiTK" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="name_LoaiTK" Type="nvarchar" MaxLength="50" />
+          <Property Name="descrip_LoaiTK" Type="ntext" />
+        </EntityType>
+        <EntityType Name="NhaCungCap">
+          <Key>
+            <PropertyRef Name="id_NhaCC" />
+          </Key>
+          <Property Name="id_NhaCC" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="name_NhaCC" Type="nvarchar" MaxLength="50" />
+          <Property Name="phone_NhaCC" Type="nchar" MaxLength="10" />
+          <Property Name="email_NhaCC" Type="nchar" MaxLength="50" />
+          <Property Name="address_NhaCC" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="SanPham">
+          <Key>
+            <PropertyRef Name="id_SanPham" />
+          </Key>
+          <Property Name="id_SanPham" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="sokhung_SanPham" Type="nchar" MaxLength="18" />
+          <Property Name="somay_SanPham" Type="nchar" MaxLength="18" />
+          <Property Name="descript_SanPham" Type="ntext" />
+        </EntityType>
+        <EntityType Name="TaiKhoan">
+          <Key>
+            <PropertyRef Name="user_Acc" />
+          </Key>
+          <Property Name="user_Acc" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="pass_Acc" Type="nchar" MaxLength="20" />
+          <Property Name="status" Type="bit" />
+          <Property Name="id_LoaiTK" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="TT_TaiKhoan">
+          <Key>
+            <PropertyRef Name="user_Acc" />
+          </Key>
+          <Property Name="user_Acc" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="name_User" Type="nchar" MaxLength="25" />
+          <Property Name="email_User" Type="nchar" MaxLength="20" />
+          <Property Name="phone_User" Type="nchar" MaxLength="10" />
+          <Property Name="address_User" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <Function Name="Get_DanhMucCustom" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="Get_TaiKhoan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="value" Type="nchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="ThanhHa_MotorCycleModelStoreContainer">
+          <EntitySet Name="Bao_Hanh" EntityType="Self.Bao_Hanh" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CT_HoaDon" EntityType="Self.CT_HoaDon" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DanhMuc" EntityType="Self.DanhMuc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Hang_SX" EntityType="Self.Hang_SX" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Loai_SP" EntityType="Self.Loai_SP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Loai_TK" EntityType="Self.Loai_TK" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NhaCungCap" EntityType="Self.NhaCungCap" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TT_TaiKhoan" EntityType="Self.TT_TaiKhoan" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ThanhHa_MotorCycleModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Hang_SX">
+          <Key>
+            <PropertyRef Name="id_HangSX" />
+          </Key>
+          <Property Name="id_HangSX" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="name_HangSX" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="descrip_HangSX" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="ThanhHa_MotorCycleEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Hang_SX" EntityType="Self.Hang_SX" />
+          <EntitySet Name="Loai_SP" EntityType="ThanhHa_MotorCycleModel.Loai_SP" />
+          <EntitySet Name="NhaCungCap" EntityType="ThanhHa_MotorCycleModel.NhaCungCap" />
+          <EntitySet Name="DanhMuc" EntityType="ThanhHa_MotorCycleModel.DanhMuc" />
+          <EntitySet Name="Loai_TK" EntityType="ThanhHa_MotorCycleModel.Loai_TK" />
+          <EntitySet Name="Bao_Hanh" EntityType="ThanhHa_MotorCycleModel.Bao_Hanh" />
+          <FunctionImport Name="Get_DanhMucCustom" ReturnType="Collection(ThanhHa_MotorCycleModel.Get_DanhMucCustom_Result)">
+          <Parameter Name="ID" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="CT_HoaDon" EntityType="ThanhHa_MotorCycleModel.CT_HoaDon" />
+          <EntitySet Name="HoaDon" EntityType="ThanhHa_MotorCycleModel.HoaDon" />
+          <EntitySet Name="SanPham" EntityType="ThanhHa_MotorCycleModel.SanPham" />
+          <EntitySet Name="TaiKhoan" EntityType="ThanhHa_MotorCycleModel.TaiKhoan" />
+          <EntitySet Name="TT_TaiKhoan" EntityType="ThanhHa_MotorCycleModel.TT_TaiKhoan" />
+          <FunctionImport Name="Get_TaiKhoan" ReturnType="Collection(ThanhHa_MotorCycleModel.Get_TaiKhoan_Result)">
+            <Parameter Name="value" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="Get_HangSxList_Result">
+          <Property Type="String" Name="mã" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="tên_hãng" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <EntityType Name="Loai_SP">
+          <Key>
+            <PropertyRef Name="id_LoaiSP" />
+          </Key>
+          <Property Name="id_LoaiSP" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="name_LoaiSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="descrip_LoaiSP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="NhaCungCap">
+          <Key>
+            <PropertyRef Name="id_NhaCC" />
+          </Key>
+          <Property Name="id_NhaCC" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="name_NhaCC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="phone_NhaCC" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="email_NhaCC" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="address_NhaCC" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DanhMuc">
+          <Key>
+            <PropertyRef Name="id_DanhMuc" />
+          </Key>
+          <Property Name="id_DanhMuc" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="name_DanhMuc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="size_DanhMuc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="engine_DanhMuc" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="volume_DanhMuc" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="breakfont_DanhMuc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="breakend_DanhMuc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tire_DanhMuc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="torque_DanhMuc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="id_HangSX" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="id_LoaiSP" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="id_BaoHanh" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="weight_DanhMuc" Type="Int32" />
+          <Property Name="price_DanhMuc" Type="Int32" />
+          <Property Name="image_DanhMuc" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="total_DanhMuc" Type="Int32" />
+        </EntityType>
+        <ComplexType Name="Get_DanhMuc_Result">
+          <Property Type="String" Name="id_DanhMuc" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="name_DanhMuc" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="size_DanhMuc" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="engine_DanhMuc" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="volume_DanhMuc" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="breakfont_DanhMuc" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="breakend_DanhMuc" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="tire_DanhMuc" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="torque_DanhMuc" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="name_HangSX" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="name_LoaiSP" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="km_BaoHanh" Nullable="true" />
+          <Property Type="Int32" Name="time_BaoHanh" Nullable="true" />
+          <Property Type="Int32" Name="weight_DanhMuc" Nullable="true" />
+          <Property Type="Int32" Name="price_DanhMuc" Nullable="true" />
+          <Property Type="Binary" Name="image_DanhMuc" Nullable="true" MaxLength="Max" />
+          <Property Type="Int32" Name="total_DanhMuc" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="Loai_TK">
+          <Key>
+            <PropertyRef Name="id_LoaiTK" />
+          </Key>
+          <Property Name="id_LoaiTK" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="name_LoaiTK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="descrip_LoaiTK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Bao_Hanh">
+          <Key>
+            <PropertyRef Name="id_BaoHanh" />
+          </Key>
+          <Property Name="id_BaoHanh" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="lim_BaoHanh" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="descript" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <ComplexType Name="Get_DanhMucCustom_Result">
+          <Property Type="String" Name="id_DanhMuc" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="name_DanhMuc" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="size_DanhMuc" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="engine_DanhMuc" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="volume_DanhMuc" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="breakfont_DanhMuc" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="breakend_DanhMuc" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="tire_DanhMuc" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="torque_DanhMuc" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="name_HangSX" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="name_LoaiSP" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="lim_BaoHanh" Nullable="true" MaxLength="80" />
+          <Property Type="Int32" Name="weight_DanhMuc" Nullable="true" />
+          <Property Type="Int32" Name="price_DanhMuc" Nullable="true" />
+          <Property Type="Binary" Name="image_DanhMuc" Nullable="true" MaxLength="Max" />
+          <Property Type="Int32" Name="total_DanhMuc" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="CT_HoaDon">
+          <Key>
+            <PropertyRef Name="id_DanhMuc" />
+            <PropertyRef Name="id_HoaDon" />
+          </Key>
+          <Property Name="id_DanhMuc" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="id_HoaDon" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="num_HoaDon" Type="Int32" />
+          <Property Name="total_HoaDon" Type="Int32" />
+        </EntityType>
+        <EntityType Name="HoaDon">
+          <Key>
+            <PropertyRef Name="id_HoaDon" />
+          </Key>
+          <Property Name="id_HoaDon" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="date_HoaDon" Type="DateTime" Precision="0" />
+          <Property Name="phone_HoaDon" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="name_HoaDon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="email_HoaDon" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="address_HoaDon" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SanPham">
+          <Key>
+            <PropertyRef Name="id_SanPham" />
+          </Key>
+          <Property Name="id_SanPham" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="sokhung_SanPham" Type="String" MaxLength="18" FixedLength="true" Unicode="true" />
+          <Property Name="somay_SanPham" Type="String" MaxLength="18" FixedLength="true" Unicode="true" />
+          <Property Name="descript_SanPham" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TaiKhoan">
+          <Key>
+            <PropertyRef Name="user_Acc" />
+          </Key>
+          <Property Name="user_Acc" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="pass_Acc" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="status" Type="Boolean" />
+          <Property Name="id_LoaiTK" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TT_TaiKhoan">
+          <Key>
+            <PropertyRef Name="user_Acc" />
+          </Key>
+          <Property Name="user_Acc" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="name_User" Type="String" MaxLength="25" FixedLength="true" Unicode="true" />
+          <Property Name="email_User" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="phone_User" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="address_User" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <ComplexType Name="Get_TaiKhoan_Result">
+          <Property Type="String" Name="user_Acc" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="name_User" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="email_User" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="phone_User" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="address_User" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="pass_Acc" Nullable="true" MaxLength="20" />
+          <Property Type="Boolean" Name="status" Nullable="true" />
+          <Property Type="String" Name="id_LoaiTK" Nullable="true" MaxLength="10" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ThanhHa_MotorCycleModelStoreContainer" CdmEntityContainer="ThanhHa_MotorCycleEntities">
+          <EntitySetMapping Name="Hang_SX">
+            <EntityTypeMapping TypeName="ThanhHa_MotorCycleModel.Hang_SX">
+              <MappingFragment StoreEntitySet="Hang_SX">
+                <ScalarProperty Name="id_HangSX" ColumnName="id_HangSX" />
+                <ScalarProperty Name="name_HangSX" ColumnName="name_HangSX" />
+                <ScalarProperty Name="descrip_HangSX" ColumnName="descrip_HangSX" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Loai_SP">
+            <EntityTypeMapping TypeName="ThanhHa_MotorCycleModel.Loai_SP">
+              <MappingFragment StoreEntitySet="Loai_SP">
+                <ScalarProperty Name="descrip_LoaiSP" ColumnName="descrip_LoaiSP" />
+                <ScalarProperty Name="name_LoaiSP" ColumnName="name_LoaiSP" />
+                <ScalarProperty Name="id_LoaiSP" ColumnName="id_LoaiSP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NhaCungCap">
+            <EntityTypeMapping TypeName="ThanhHa_MotorCycleModel.NhaCungCap">
+              <MappingFragment StoreEntitySet="NhaCungCap">
+                <ScalarProperty Name="address_NhaCC" ColumnName="address_NhaCC" />
+                <ScalarProperty Name="email_NhaCC" ColumnName="email_NhaCC" />
+                <ScalarProperty Name="phone_NhaCC" ColumnName="phone_NhaCC" />
+                <ScalarProperty Name="name_NhaCC" ColumnName="name_NhaCC" />
+                <ScalarProperty Name="id_NhaCC" ColumnName="id_NhaCC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DanhMuc">
+            <EntityTypeMapping TypeName="ThanhHa_MotorCycleModel.DanhMuc">
+              <MappingFragment StoreEntitySet="DanhMuc">
+                <ScalarProperty Name="total_DanhMuc" ColumnName="total_DanhMuc" />
+                <ScalarProperty Name="image_DanhMuc" ColumnName="image_DanhMuc" />
+                <ScalarProperty Name="price_DanhMuc" ColumnName="price_DanhMuc" />
+                <ScalarProperty Name="weight_DanhMuc" ColumnName="weight_DanhMuc" />
+                <ScalarProperty Name="id_BaoHanh" ColumnName="id_BaoHanh" />
+                <ScalarProperty Name="id_LoaiSP" ColumnName="id_LoaiSP" />
+                <ScalarProperty Name="id_HangSX" ColumnName="id_HangSX" />
+                <ScalarProperty Name="torque_DanhMuc" ColumnName="torque_DanhMuc" />
+                <ScalarProperty Name="tire_DanhMuc" ColumnName="tire_DanhMuc" />
+                <ScalarProperty Name="breakend_DanhMuc" ColumnName="breakend_DanhMuc" />
+                <ScalarProperty Name="breakfont_DanhMuc" ColumnName="breakfont_DanhMuc" />
+                <ScalarProperty Name="volume_DanhMuc" ColumnName="volume_DanhMuc" />
+                <ScalarProperty Name="engine_DanhMuc" ColumnName="engine_DanhMuc" />
+                <ScalarProperty Name="size_DanhMuc" ColumnName="size_DanhMuc" />
+                <ScalarProperty Name="name_DanhMuc" ColumnName="name_DanhMuc" />
+                <ScalarProperty Name="id_DanhMuc" ColumnName="id_DanhMuc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Loai_TK">
+            <EntityTypeMapping TypeName="ThanhHa_MotorCycleModel.Loai_TK">
+              <MappingFragment StoreEntitySet="Loai_TK">
+                <ScalarProperty Name="descrip_LoaiTK" ColumnName="descrip_LoaiTK" />
+                <ScalarProperty Name="name_LoaiTK" ColumnName="name_LoaiTK" />
+                <ScalarProperty Name="id_LoaiTK" ColumnName="id_LoaiTK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bao_Hanh">
+            <EntityTypeMapping TypeName="ThanhHa_MotorCycleModel.Bao_Hanh">
+              <MappingFragment StoreEntitySet="Bao_Hanh">
+                <ScalarProperty Name="descript" ColumnName="descript" />
+                <ScalarProperty Name="lim_BaoHanh" ColumnName="lim_BaoHanh" />
+                <ScalarProperty Name="id_BaoHanh" ColumnName="id_BaoHanh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="Get_DanhMucCustom" FunctionName="ThanhHa_MotorCycleModel.Store.Get_DanhMucCustom">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ThanhHa_MotorCycleModel.Get_DanhMucCustom_Result">
+                <ScalarProperty Name="id_DanhMuc" ColumnName="id_DanhMuc" />
+                <ScalarProperty Name="name_DanhMuc" ColumnName="name_DanhMuc" />
+                <ScalarProperty Name="size_DanhMuc" ColumnName="size_DanhMuc" />
+                <ScalarProperty Name="engine_DanhMuc" ColumnName="engine_DanhMuc" />
+                <ScalarProperty Name="volume_DanhMuc" ColumnName="volume_DanhMuc" />
+                <ScalarProperty Name="breakfont_DanhMuc" ColumnName="breakfont_DanhMuc" />
+                <ScalarProperty Name="breakend_DanhMuc" ColumnName="breakend_DanhMuc" />
+                <ScalarProperty Name="tire_DanhMuc" ColumnName="tire_DanhMuc" />
+                <ScalarProperty Name="torque_DanhMuc" ColumnName="torque_DanhMuc" />
+                <ScalarProperty Name="name_HangSX" ColumnName="name_HangSX" />
+                <ScalarProperty Name="name_LoaiSP" ColumnName="name_LoaiSP" />
+                <ScalarProperty Name="lim_BaoHanh" ColumnName="lim_BaoHanh" />
+                <ScalarProperty Name="weight_DanhMuc" ColumnName="weight_DanhMuc" />
+                <ScalarProperty Name="price_DanhMuc" ColumnName="price_DanhMuc" />
+                <ScalarProperty Name="image_DanhMuc" ColumnName="image_DanhMuc" />
+                <ScalarProperty Name="total_DanhMuc" ColumnName="total_DanhMuc" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="CT_HoaDon">
+            <EntityTypeMapping TypeName="ThanhHa_MotorCycleModel.CT_HoaDon">
+              <MappingFragment StoreEntitySet="CT_HoaDon">
+                <ScalarProperty Name="total_HoaDon" ColumnName="total_HoaDon" />
+                <ScalarProperty Name="num_HoaDon" ColumnName="num_HoaDon" />
+                <ScalarProperty Name="id_HoaDon" ColumnName="id_HoaDon" />
+                <ScalarProperty Name="id_DanhMuc" ColumnName="id_DanhMuc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HoaDon">
+            <EntityTypeMapping TypeName="ThanhHa_MotorCycleModel.HoaDon">
+              <MappingFragment StoreEntitySet="HoaDon">
+                <ScalarProperty Name="address_HoaDon" ColumnName="address_HoaDon" />
+                <ScalarProperty Name="email_HoaDon" ColumnName="email_HoaDon" />
+                <ScalarProperty Name="name_HoaDon" ColumnName="name_HoaDon" />
+                <ScalarProperty Name="phone_HoaDon" ColumnName="phone_HoaDon" />
+                <ScalarProperty Name="date_HoaDon" ColumnName="date_HoaDon" />
+                <ScalarProperty Name="id_HoaDon" ColumnName="id_HoaDon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SanPham">
+            <EntityTypeMapping TypeName="ThanhHa_MotorCycleModel.SanPham">
+              <MappingFragment StoreEntitySet="SanPham">
+                <ScalarProperty Name="descript_SanPham" ColumnName="descript_SanPham" />
+                <ScalarProperty Name="somay_SanPham" ColumnName="somay_SanPham" />
+                <ScalarProperty Name="sokhung_SanPham" ColumnName="sokhung_SanPham" />
+                <ScalarProperty Name="id_SanPham" ColumnName="id_SanPham" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TaiKhoan">
+            <EntityTypeMapping TypeName="ThanhHa_MotorCycleModel.TaiKhoan">
+              <MappingFragment StoreEntitySet="TaiKhoan">
+                <ScalarProperty Name="id_LoaiTK" ColumnName="id_LoaiTK" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="pass_Acc" ColumnName="pass_Acc" />
+                <ScalarProperty Name="user_Acc" ColumnName="user_Acc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TT_TaiKhoan">
+            <EntityTypeMapping TypeName="ThanhHa_MotorCycleModel.TT_TaiKhoan">
+              <MappingFragment StoreEntitySet="TT_TaiKhoan">
+                <ScalarProperty Name="address_User" ColumnName="address_User" />
+                <ScalarProperty Name="phone_User" ColumnName="phone_User" />
+                <ScalarProperty Name="email_User" ColumnName="email_User" />
+                <ScalarProperty Name="name_User" ColumnName="name_User" />
+                <ScalarProperty Name="user_Acc" ColumnName="user_Acc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="Get_TaiKhoan" FunctionName="ThanhHa_MotorCycleModel.Store.Get_TaiKhoan">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ThanhHa_MotorCycleModel.Get_TaiKhoan_Result">
+                <ScalarProperty Name="user_Acc" ColumnName="user_Acc" />
+                <ScalarProperty Name="name_User" ColumnName="name_User" />
+                <ScalarProperty Name="email_User" ColumnName="email_User" />
+                <ScalarProperty Name="phone_User" ColumnName="phone_User" />
+                <ScalarProperty Name="address_User" ColumnName="address_User" />
+                <ScalarProperty Name="pass_Acc" ColumnName="pass_Acc" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="id_LoaiTK" ColumnName="id_LoaiTK" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
